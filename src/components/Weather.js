@@ -3,9 +3,7 @@ import React, { useState, useEffect } from 'react';
 const Weather = () => {
 
     const [searchOptions, setSearchOptions] = useState({
-        key: process.env.REACT_APP_API_KEY,
-        url: 'https://api.nasa.gov/mars-photos/api/',
-        numberOfResults: 25,
+        key: process.env.REACT_APP_WEATHER_API_KEY,
       })
         
       const [weatherData, setWeatherData] = useState()
@@ -24,10 +22,11 @@ const Weather = () => {
           console.log(weatherData)
     return (
         <div>
-            {weatherData.map(temp => {
+            {/* {weatherData.map(temp => {
                 return <p>{temp.sol_keys}</p>
-                    })}
+                    })} */}
          
+          <p>weather widget</p>
         </div>
     );
 };

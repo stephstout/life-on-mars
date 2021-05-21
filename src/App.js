@@ -9,20 +9,26 @@ import './App.css';
 function App() {
  
   return (
-    
       <div className="container">
         <div className="sidebar">
           <Sidebar />
         </div>
         <Switch>
-          <Route exact path="/" >
+          <Route path="/">
             <Home />
           </Route>
-          <Route exact path="/gallery" >
-            <RoverGallery />
+          <Route 
+            path="/gallery/:rover/:cam"
+            render={(routerProps) => <RoverGallery match={routerProps.match}/>
+            }
+            />
+           
+          <Route exact path="/about">
+            <About />
           </Route>
 
         </Switch>
+
       </div>
   );
     
