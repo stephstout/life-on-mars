@@ -12,7 +12,7 @@ const Sidebar = ( { curiosityGallery } ) => {
             <h1>Life on Mars</h1>
             </Link>
             <Nav />
-            <Weather />
+            {/* <Weather /> */}
         </div>
     );
 };

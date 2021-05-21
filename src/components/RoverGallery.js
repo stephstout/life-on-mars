@@ -10,34 +10,32 @@ const RoverGallery = () => {
       })
         
       const [roverData, setRoverData] = useState()
-          // holds the array of photos
+     
         const curiosityGallery = () => {
-          const url = `https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&page=1&api_key=${searchOptions.key}`
+          const url = `https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&page=1&camera=mast&api_key=${searchOptions.key}`
           fetch(url)
           .then(data => data.json())
-          .then(data => setRoverData(data))
+          .then(data => setRoverData(data.photos))
           .catch(console.error)
           }
-            useEffect(() => {
-              return curiosityGallery()
-            }, [])
+
+        useEffect(() => {
+          return curiosityGallery()
+          }, [])
 
         if (!roverData) {
             return "loading"
         }
-        console.log(roverData)
 
-        const curiosityImages = roverData.map(image => {
-            return (
-                <div>{image.camera}</div>
-            )
-            })
-            console.log(curiosityImages)
-    return (
-        <div className="gallery">
-            <p>this is the gallery</p>
-            <p>{curiosityImages}</p>
+        console.log(roverData)
+        
+        return (
+            <div className="gallery">
             
+            {roverData.map(image => {
+                return <img style={{height: "100px"}}src={image.img_src}></img>
+                    })}
+         
         </div>
     )
 };
