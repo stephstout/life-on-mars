@@ -6,7 +6,7 @@ const RoverGallery = ( { match } ) => {
     const [searchOptions, setSearchOptions] = useState({
         key: process.env.REACT_APP_API_KEY,
       })
-        
+        console.log(searchOptions)
       const [roverData, setRoverData] = useState()
      
         const curiosityGallery = () => {

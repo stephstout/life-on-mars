@@ -23,7 +23,8 @@ const Sidebar = () => {
             <Link to="/news">
                 <h3>news</h3>
             </Link>
-            {/* <Weather /> */}
+            
+            <Weather />
         </div>
     );
 };

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react"
 import { Route, Switch } from "react-router-dom"
+import "bootswatch/dist/solar/bootstrap.min.css"
 import Home from "./components/Home"
 import Sidebar from "./components/Sidebar"
 import RoverGallery from "./components/RoverGallery"
@@ -14,13 +15,12 @@ function App() {
           <Sidebar />
         </div>
         <Switch>
-          <Route path="/">
+          <Route exact path="/">
             <Home />
           </Route>
           <Route 
             path="/gallery/:rover/:cam"
-            render={(routerProps) => <RoverGallery match={routerProps.match}/>
-            }
+            render={(routerProps) => <RoverGallery match={routerProps.match}/>}
             />
            
           <Route exact path="/about">
