@@ -2,12 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { Route, Link } from "react-router-dom"
 
 const RoverGallery = ( { match } ) => {
-    
+    console.log(match)
     const [searchOptions, setSearchOptions] = useState({
         key: process.env.REACT_APP_API_KEY,
       })
-        console.log(searchOptions)
       const [roverData, setRoverData] = useState()
+      console.log(roverData)
      
         const curiosityGallery = () => {
           const url = `https://api.nasa.gov/mars-photos/api/v1/rovers/${match.params.rover}/photos?sol=1000&page=1&camera=${match.params.cam}&api_key=${searchOptions.key}`
@@ -17,15 +17,22 @@ const RoverGallery = ( { match } ) => {
           .catch(console.error)
           }
 
+
+
         useEffect(() => {
+            // // if the rover and camera change, reload the mount
+            // if (match.params.camera === roverData.camera.name)
           return curiosityGallery()
-          }, [])
+          
+        // } else {
+
+        // }
+          },
+          [])
 
         if (!roverData) {
             return "loading"
         }
-
-        console.log(roverData)
         
         return (
             // <div>

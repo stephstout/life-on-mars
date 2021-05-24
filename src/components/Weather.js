@@ -25,18 +25,11 @@ const Weather = () => {
           if (!weatherData) {
             return null
         }
-          console.log(weatherData)
-
-        // const farenheit = () => {
-        //     (weatherData.main.temp - 273.15) * (9/5) + 32 
-        //     return
-        // }
-        // console.log(farenheit)
 
     return (
         <div> 
-            <h3>current temp</h3>
-          <p>{`${Math.round(weatherData.main.temp - 273.15) * (9/5) + 32} degrees F`}</p>
+            <h4>current temp:</h4>
+          <p>{`${Math.round((weatherData.main.temp - 273.15) * (9/5) + 32)} degrees F`}</p>
         </div>
     );
 };
