@@ -29,7 +29,7 @@ const Weather = () => {
     return (
         <div> 
             <h4>current temp:</h4>
-            console.log(weatherData)
+
           <p>{`${Math.round((weatherData.main.temp - 273.15) * (9/5) + 32)} degrees F`}</p>
         </div>
     );
