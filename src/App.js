@@ -9,6 +9,7 @@ import './App.css';
 
 function App() {
  
+
   return (
       <div className="container">
         <div className="sidebar">
@@ -19,7 +20,7 @@ function App() {
             <Home />
           </Route>
           <Route 
-            exact path="/gallery/:rover/:cam"
+            path="/gallery/:rover/:cam"
             render={(routerProps) => <RoverGallery match={routerProps.match}/>}
             />
            

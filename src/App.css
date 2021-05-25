@@ -50,7 +50,7 @@ li {
   max-height: 200px;
 }
 
-.card { 
+.rover-images { 
   padding: 5px;
 
 }
@@ -71,14 +71,37 @@ p {
   font-family: 'Zilla Slab', serif;
 }
 
-/* 
+
 @media only screen and (max-width: 600px) {
-  body {
+  .container {
     background-color: white;
+    display: flex;
+    flex-direction: column;
   }
+
+.sidebar {
+  background-color: white;
+  color:rgb(65, 56, 53)
+}
+
+h1 {
+  color:rgb(65, 56, 53)
+}
+
+h3 {
+  color:rgb(65, 56, 53);
+}
+
+li {
+  color:rgb(65, 56, 53)
+}
+
+.home {
+  padding: 10px;
+}
   .topnav a {
     float: none;
     width: 100%;
   }
   
-} */
+}
