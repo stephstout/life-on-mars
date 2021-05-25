@@ -34,6 +34,13 @@ li {
   margin: 10px;
 }
 
+.title {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+}
+
 .list-header {
   list-style: none;
   padding: 0;
@@ -52,7 +59,7 @@ li {
 
 .rover-images { 
   padding: 5px;
-
+  height: 100%;
 }
 
 .home {
@@ -61,6 +68,7 @@ li {
   max-width: 80vh;
   justify-content: center;
   margin: auto;
+  padding: 20px;
 }
 
 .about {
@@ -97,7 +105,7 @@ li {
 }
 
 .home {
-  padding: 10px;
+  padding: 10px 20px 10px 20px;
   width: 100%;
 }
   .topnav a {

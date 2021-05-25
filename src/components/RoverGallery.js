@@ -8,11 +8,11 @@ const RoverGallery = ( {match} ) => {
         key: process.env.REACT_APP_API_KEY,
       })
     
-      const [pageParams, setPageParams] = useState() 
+    const [pageParams, setPageParams] = useState() 
 
-    if (match.params != pageParams) {
+      if (match.params != pageParams) {
         setPageParams(match.params)
-    } 
+      } 
 
       const [roverData, setRoverData] = useState()
       console.log(roverData)
@@ -35,14 +35,14 @@ const RoverGallery = ( {match} ) => {
         
         return (
             // <div>
-            //     <h1>{`${roverData.rover.name} ${roverData.camera.full_name}`}</h1>
             <div className="gallery">
-                {/* <h1 className="title"> Curiosity Rover : Chemistry + Camera Complex </h1> */}
+                <h1 className="title"> Photos from Mars Sol 1000 </h1>
+                {/* <p>{`photos from ${roverData.rover.name} ${roverData.camera.full_name}`}</p> */}
             {roverData.map(image => {
-                return (
-                    <div className="rover-images">
+              return (
+                <div className="rover-images">
                         <img className="images" src={image.img_src} key={image.camera.id}/>
-                        {/* <p>{`rover: ${image.rover.name} | status: ${image.rover.status}`}</p> */}
+                        <p>{`rover: ${image.rover.name} | status: ${image.rover.status}`}</p>
                     </div>
                     )}
                     )}

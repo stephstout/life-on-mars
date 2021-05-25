@@ -20,7 +20,7 @@ const Sidebar = () => {
             <Link to="/about">
                 <h3>about</h3>
             </Link>
-            <a href="https://mars.nasa.gov/news/?page=0&per_page=40&order=publish_date+desc%2Ccreated_at+desc&search=&category=19%2C165%2C184%2C204&blank_scope=Latest" alt="mars news">
+            <a href="https://mars.nasa.gov/news/?page=0&per_page=40&order=publish_date+desc%2Ccreated_at+desc&search=&category=19%2C165%2C184%2C204&blank_scope=Latest" alt="mars news" target="_blank">
                 <h3>news</h3>
             </a>
             
