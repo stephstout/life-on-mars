@@ -12,7 +12,7 @@
 - [Open Weather API](https://openweathermap.org/api)
 
 ## Installation Instructions
-Click [here](https://ss-life-on-mars.herokuapp.com/).
+Click [here](https://ss-life-on-mars.herokuapp.com/) to go to the app.
 
 ## User Stories:
 - As as User, I want to be able to choose a Mars rover.
