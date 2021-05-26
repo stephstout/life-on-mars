@@ -2,20 +2,18 @@ import React, { useState, useEffect } from 'react';
 import { Route, Link } from "react-router-dom"
 
 const RoverGallery = ( {match} ) => {
-    console.log(match)
+   
 
     const [searchOptions, setSearchOptions] = useState({
         key: process.env.REACT_APP_API_KEY,
       })
     
     const [pageParams, setPageParams] = useState() 
-
       if (match.params != pageParams) {
         setPageParams(match.params)
       } 
 
       const [roverData, setRoverData] = useState()
-      console.log(roverData)
      
         const curiosityGallery = () => {
           const url = `https://api.nasa.gov/mars-photos/api/v1/rovers/${match.params.rover}/photos?sol=1000&page=1&camera=${match.params.cam}&api_key=${searchOptions.key}`
@@ -26,7 +24,7 @@ const RoverGallery = ( {match} ) => {
           }
 
         useEffect(() => {
-          return curiosityGallery()
+          curiosityGallery()
         }, [pageParams])
 
         if (!roverData) {
@@ -34,10 +32,9 @@ const RoverGallery = ( {match} ) => {
         }
         
         return (
-            // <div>
+            
             <div className="gallery">
-                <h1 className="title"> Photos from Mars Sol 1000 </h1>
-                {/* <p>{`photos from ${roverData.rover.name} ${roverData.camera.full_name}`}</p> */}
+                {roverData? <h1 className="title">{`${roverData[0]?.rover?.name} ${roverData[0]?.camera?.full_name}`}</h1>: null}
             {roverData.map(image => {
               return (
                 <div className="rover-images">
@@ -46,9 +43,8 @@ const RoverGallery = ( {match} ) => {
                     </div>
                     )}
                     )}
-            </div>
-            // </div>
-        )
+                </div>
+          )
 };
 
 export default RoverGallery;

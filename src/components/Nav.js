@@ -1,12 +1,5 @@
 import React, { useState } from 'react';
 import { Route, Link } from "react-router-dom"
-import {LinkContainer} from 'react-router-bootstrap'
-// import "bootswatch/dist/spacelab/bootstrap.min.css"
-import Navbar from 'react-bootstrap/Navbar'
-// import Nav from 'react-bootstrap/Nav'
-
-
-
 
 const Nav = () => {
 

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react"
 import { Route, Switch } from "react-router-dom"
-// import "bootswatch/dist/spacelab/bootstrap.min.css"
 import Home from "./components/Home"
 import Sidebar from "./components/Sidebar"
 import RoverGallery from "./components/RoverGallery"

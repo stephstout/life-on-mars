@@ -7,8 +7,7 @@ const Weather = () => {
   })
   
   const [weatherData, setWeatherData] = useState()
-  // const apiKey = process.env.REACT_APP_WEATHER_API_KEY
-  console.log(weather)
+
 
         const weatherWidget = () => {
           const url = `https://api.openweathermap.org/data/2.5/weather?q=bozeman&appid=${weather.key}`
